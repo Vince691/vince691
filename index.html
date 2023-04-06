@@ -1,156 +1,156 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Love Letter</title>
-  <style>
-    /* Global Styles */
-    * {
-      margin: 0;
-      padding: 0;
-      font-family: 'Roboto', sans-serif;
-    }
+    <!DOCTYPE html>
+    <html>
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Love Letter</title>
+    <style>
+        /* Global Styles */
+        * {
+        margin: 0;
+        padding: 0;
+        font-family: 'Roboto', sans-serif;
+        }
+        
+        /* Typography */
+        h1, h2 {
+        font-weight: 700;
+        text-transform: uppercase;
+        }
+        
+        h1 {
+        font-size: 48px;
+        letter-spacing: 2px;
+        color: #fcfbfb;
+        text-shadow: 2px 2px 0 #000000;
+        margin-bottom: 30px;
+        }
+        
+        h2 {
+        font-size: 36px;
+        margin-bottom: 20px;
+        color: #fc97be;
+        text-shadow: 2px 2px 0 #000000;
+        }
+        
+        p {
+        font-size: 24px;
+        line-height: 1.5;
+        color: #0b0b0b;
+        text-shadow: 2px 2px 0 #fef9f9;
+        margin-bottom: 20px;
+        }
+        
+        /* Background */
+        body {
+        background-image: linear-gradient(to right bottom, #eb4c4c, #f4cece);
+        }
+        
+        /* Header */
+        header {
+        background-color: transparent;
+        padding: 50px 0;
+        text-align: center;
+        position: relative;
+        z-index: 1;
+        }
+        
+        /* Love Letter */
+        #letter {
+        max-width: 800px;
+        margin: 40px auto;
+        background-color: rgba(249, 244, 244, 0.9);
+        padding: 40px;
+        line-height: 1.5;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+        position: relative;
+        z-index: 1;
+        border-radius: 10%;
+        border: 1;
+        
+        }
+        
+        /* Floating Elements */
+        .floating-hearts {
+        position: fixed;
+        top: 1;
+        left: 1;
+        width: 100%;
+        height: 100%;
+        z-index: -2;
+        }
+        
+        .floating-heart {
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        background-color: rgba(173, 2, 62, 0.5);
+        border-radius: 50%;
+        animation-name: float;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-timing-function: ease-in-out;
+        }
+        
+        .floating-image {
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+        margin: 20px;
+        opacity: 0.5;
+        border: 10px solid transparent;
+        animation-name: float;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-timing-function: ease-in-out;
+        border-radius: 0%;
+        }
+        
+        img {
+        width: 50%;
+        float: right;
+        margin-right: 20px;
+        animation-name: float;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-timing-function: ease-in-out;
+        border-radius: 0%;
+        }
     
-    /* Typography */
-    h1, h2 {
-      font-weight: 700;
-      text-transform: uppercase;
+    @keyframes float {
+        0% {
+        transform: translateY(0);
+        }
+        50% {
+        transform: translateY(10px);
+        }
+        100% {
+        transform: translateY(0);
+        }
     }
-    
-    h1 {
-      font-size: 48px;
-      letter-spacing: 2px;
-      color: #fcfbfb;
-      text-shadow: 2px 2px 0 #000000;
-      margin-bottom: 30px;
-    }
-    
-    h2 {
-      font-size: 36px;
-      margin-bottom: 20px;
-      color: #fc97be;
-      text-shadow: 2px 2px 0 #000000;
-    }
-    
-    p {
-      font-size: 24px;
-      line-height: 1.5;
-      color: #0b0b0b;
-      text-shadow: 2px 2px 0 #fef9f9;
-      margin-bottom: 20px;
-    }
-    
-    /* Background */
-    body {
-      background-image: linear-gradient(to right bottom, #eb4c4c, #f4cece);
-    }
-    
-    /* Header */
-    header {
-      background-color: transparent;
-      padding: 50px 0;
-      text-align: center;
-      position: relative;
-      z-index: 1;
-    }
-    
-    /* Love Letter */
-    #letter {
-      max-width: 800px;
-      margin: 40px auto;
-      background-color: rgba(249, 244, 244, 0.9);
-      padding: 40px;
-      line-height: 1.5;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.3);
-      position: relative;
-      z-index: 1;
-      border-radius: 5%;
-    }
-    
-    /* Floating Elements */
-    .floating-hearts {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: -2;
-    }
-    
-    .floating-heart {
-      position: absolute;
-      width: 20px;
-      height: 20px;
-      background-color: rgba(255, 87, 147, 0.5);
-      border-radius: 50%;
-      animation-name: float;
-      animation-duration: 3s;
-      animation-iteration-count: infinite;
-      animation-direction: alternate;
-      animation-timing-function: ease-in-out;
-      box-shadow: 0 4px 6px rgba(0, 0, 0);
-    }
-    
-    .floating-image {
-      position: absolute;
-      bottom: 20px;
-      right: 20px;
-      margin: 20px;
-      opacity: 0.5;
-      border: 10px solid transparent;
-      animation-name: float;
-      animation-duration: 3s;
-      animation-iteration-count: infinite;
-      animation-direction: alternate;
-      animation-timing-function: ease-in-out;
-      border-radius: 10%;
-    }
-    
-    img {
-      width: 50%;
-      float: right;
-      margin-right: 20px;
-      animation-name: float;
-      animation-duration: 3s;
-      animation-iteration-count: infinite;
-      animation-direction: alternate;
-      animation-timing-function: ease-in-out;
-      border-radius: 10%;
-      box-shadow: 0 4px 6px rgb(0, 0, 0);
-    }
-  
-  @keyframes float {
-    0% {
-      transform: translateY(0);
-    }
-    50% {
-      transform: translateY(10px);
-    }
-    100% {
-      transform: translateY(0);
-    }
-  }
-  </style>
-</head>
-<body>
-  <header>
-    <h1>HI PET HEHE</h1>
-  </header>
+    </style>
+    </head>
+    <body>
+    <header>
+        <h1>HI PET HEHE</h1>
+    </header>
 
-  <div id="letter">
-    <h2>Frechie Ann,</h2>
-    <p>Pet I wanted to take a moment to express my feelings for you. There are so many things I want to say to you, but I never seem to find the right words. I want to to tell you something that has been weighing on my heart for a long time. I love you. I have loved you for a long time now, and I can't keep it hidden anymore.</p>
-    <p>I know we have been friends for a while, and maybe you haven't seen me in that way before. But please know that my love for you is real, and it has only grown stronger over time. You are everything I have ever wanted in a partner.</p>
-    <p>If you feel the same way, please tell me. I would be the happiest person alive if we could be together. I need you to know how I feel.</p>
-    <p></p>
-    <p>hehe,</p>
-    <p></p>
-  </div>
+    <div id="letter">
+        <h2>Frechie Ann,</h2>
+        <p>Pet I wanted to take a moment to express my feelings for you. There are so many things I want to say to you, but I never seem to find the right words. I want to to tell you something that has been weighing on my heart for a long time. I love you. I have loved you for a long time now, and I can't keep it hidden anymore.</p>
+        <p>I know we have been friends for a while, and maybe you haven't seen me in that way before. But please know that my love for you is real, and it has only grown stronger over time. You are everything I have ever wanted in a partner.</p>
+        <p>If you feel the same way, please tell me. I would be the happiest person alive if we could be together. I need you to know how I feel.</p>
+        <p></p>
+        <p>hehe,</p>
+        <p> '////' </p>
+    </div>
 
- <img src="https://i.ibb.co/drjMPRR/pet.jpg" alt="pet" border="0">
-  <footer>
-    <p></p>
-  </footer>
-</body>
-</html>
+    <img src="https://i.ibb.co/qWQtTvW/pet-removebg-preview-1.png" alt="pet" border="0">
+    <footer>
+        <p></p>
+    </footer>
+    </body>
+    </html>
