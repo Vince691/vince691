@@ -86,7 +86,7 @@ footer {
   right: 20px;
   margin: 20px;
   opacity: 0.5;
-  border: 20px solid transparent;
+  border: 10px solid transparent;
   animation-name: float;
   animation-duration: 3s;
   animation-iteration-count: infinite;
@@ -100,34 +100,31 @@ img {
   margin-right: 20px;
 }
 
-#letter img {
+#le qtter img {
   margin: 0;
 }
-
-@keyframes float {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(10px);
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
-
-/* Media queries for responsiveness */
-@media screen and (max-width: 768px) {
-  #letter {
-    padding: 20px;
-  }
-
-  img {
+img {
     width: 50%;
-    float: none;
-    margin: 20px 0;
+    float: right;
+    margin-right: 20px;
+    animation-name: float;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
   }
-}
+  
+  @keyframes float {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(10px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
   </style>
 </head>
 <body>
