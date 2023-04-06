@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Love Letter</title>
   <style>
     /* Global Styles */
@@ -9,43 +11,53 @@
       padding: 0;
       font-family: Arial, sans-serif;
     }
+css
+Copy code
+body {
+  background-color: #f8f8f8;
+}
 
-    header {
-      background-color: pink;
-      padding: 20px;
-      text-align: center;
-    }
+header {
+  background-color: #ff87b3;
+  padding: 20px;
+  text-align: center;
+}
 
-    h1 {
-      font-size: 40px;
-      color: white;
-    }
+h1 {
+  font-size: 40px;
+  color: white;
+}
 
-    #letter {
-      padding: 40px;
-      line-height: 1.5;
-    }
+#letter {
+  max-width: 800px;
+  margin: 40px auto;
+  background-color: white;
+  padding: 40px;
+  line-height: 1.5;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
 
-    h2 {
-      font-size: 30px;
-      margin-bottom: 20px;
-    }
+h2 {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
 
-    p {
-      font-size: 20px;
-      margin-bottom: 20px;
-    }
+p {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
 
-    footer {
-      background-color: pink;
-      padding: 20px;
-      text-align: center;
-      position: fixed;
-      bottom: 0;
-      width: 100%;
-      color: white;
-    }
-      
+footer {
+  background-color: #ff87b3;
+  padding: 20px;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  color: white;
+}
+
+/* Floating elements */
 .floating-hearts {
   position: fixed;
   top: 0;
@@ -67,19 +79,21 @@
   animation-direction: alternate;
   animation-timing-function: ease-in-out;
 }
+
 .floating-image {
   position: absolute;
   bottom: 20px;
   right: 20px;
   margin: 20px;
   opacity: 0.5;
-  border: 20px solid transparent;   
+  border: 20px solid transparent;
   animation-name: float;
   animation-duration: 3s;
   animation-iteration-count: infinite;
   animation-direction: alternate;
   animation-timing-function: ease-in-out;
 }
+
 img {
   width: 50%;
   float: right;
@@ -89,17 +103,31 @@ img {
 #letter img {
   margin: 0;
 }
-    @keyframes float {
-      0% {
-        transform: translateY(0);
-      }
-      50% {
-        transform: translateY(10px);
-      }
-      100% {
-        transform: translateY(0);
-      }
-    }
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Media queries for responsiveness */
+@media screen and (max-width: 768px) {
+  #letter {
+    padding: 20px;
+  }
+
+  img {
+    width: 100%;
+    float: none;
+    margin: 20px 0;
+  }
+}
   </style>
 </head>
 <body>
