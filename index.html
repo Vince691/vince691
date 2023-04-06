@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Love Letter</title>
+  <style>
+    /* Global Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    header {
+      background-color: pink;
+      padding: 20px;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 40px;
+      color: white;
+    }
+
+    #letter {
+      padding: 40px;
+      line-height: 1.5;
+    }
+
+    h2 {
+      font-size: 30px;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+
+    footer {
+      background-color: pink;
+      padding: 20px;
+      text-align: center;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      color: white;
+    } 
+
+    .floating-image {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      margin: 20px;
+      opacity: 0.5;
+      border: 20px salmon;   
+      animation-name: float;
+      animation-duration: 3s;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+      animation-timing-function: ease-in-out;
+    }
+
+    img {
+      width: 20%;
+      float: left;
+      margin-right: 20px;
+    }  
+
+    @keyframes float {
+      0% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(10px);
+      }
+      100% {
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Love Letter</h1>
+  </header>
+
+  <div id="letter">
+    <h2>Frechie Ann,</h2>
+    <p>I wanted to take a moment to express my feelings for you. You are the light of my life and the love of my heart. I cherish every moment that I spend with you, and I am so grateful to have you in my life.</p>
+    <p>You make me feel complete, and I cannot imagine my life without you. I love you more than words can express, and I will always love you with all my heart.</p>
+    <p>Your Admirer,</p>
+    <p>/////</p>
+  </div>
+
+  <img class="floating-image" src="C:\Users\Acer\Downloads\let\pet.jpg" alt="Floating heart image">
+
+  <footer>
+    <p>Copyright © Love Letter</p>
+  </footer>
+</body>
+</html>
